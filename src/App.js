@@ -27,14 +27,14 @@ export default function Board() {
     }
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
+  }
 
-    const winner = calculateWinner(nextSquares);
-    let status;
-    if (winner) {
-      status = "Winner: " + winner;
-    } else {
-      status = "Next player: " + (xIsNext ? "X" : "O");
-    }
+  const winner = calculateWinner(squares);
+  let status;
+  if (winner) {
+    status = "Winner: " + winner;
+  } else {
+    status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
   function calculateWinner(squares) {
