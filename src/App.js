@@ -114,7 +114,13 @@ export default function Game() {
         </div>
       </div>
       <div className="game-info">
-        <ol>{moves}</ol>
+        <input
+          type="range"
+          min="0"
+          max={history.length - 1}
+          value={currentMove}
+          onChange={(e) => jumpTo(Number(e.target.value))}
+        ></input>
       </div>
     </>
   );
