@@ -122,6 +122,11 @@ export default function Game() {
           onChange={(e) => jumpTo(Number(e.target.value))}
         ></input>
       </div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        {Array.from({ length: history.length }, (_, i) => (
+          <span key={i}>{i}</span>
+        ))}
+      </div>
     </>
   );
 }
