@@ -112,9 +112,9 @@ export default function Game() {
             onPlay={handlePlay}
           />
         </div>
-        <div className="game-info">
-          <ol>{moves}</ol>
-        </div>
+      </div>
+      <div className="game-info">
+        <ol>{moves}</ol>
       </div>
     </>
   );
