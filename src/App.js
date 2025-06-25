@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Board from "./components/Board";
+import Slider from "./components/Slider";
 
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -42,14 +43,7 @@ export default function Game() {
           />
         </div>
       </div>
-      <input
-        type="range"
-        min="0"
-        max={history.length - 1}
-        value={currentMove}
-        onChange={(e) => jumpTo(Number(e.target.value))}
-        style={{ width: "100px", display: "block" }}
-      ></input>
+      <Slider currentMove={currentMove} history={history} jumpTo={jumpTo} />
       <div
         style={{
           display: "flex",
