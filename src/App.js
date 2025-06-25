@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Board from "./components/Board";
 import Slider from "./components/Slider";
+import ResetGame from "./components/ResetGame";
 
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -44,15 +45,7 @@ export default function Game() {
         </div>
       </div>
       <Slider currentMove={currentMove} history={history} jumpTo={jumpTo} />
-      <button
-        style={{ backgroundColor: "lime", marginTop: "4px", width: "100px" }}
-        onClick={() => {
-          setHistory([Array(9).fill(null)]);
-          setCurrentMove(0);
-        }}
-      >
-        Reset Game
-      </button>
+      <ResetGame setHistory={setHistory} setCurrentMove={setCurrentMove} />
     </>
   );
 }
