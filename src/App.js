@@ -44,21 +44,6 @@ export default function Game() {
         </div>
       </div>
       <Slider currentMove={currentMove} history={history} jumpTo={jumpTo} />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "100px",
-          fontSize: "0.8em",
-          marginTop: "4px",
-        }}
-      >
-        {Array.from({ length: history.length }, (_, i) => (
-          <span key={i} style={{ textAlign: "center", width: "1.5em" }}>
-            {i}
-          </span>
-        ))}
-      </div>
       <button
         style={{ backgroundColor: "lime", marginTop: "4px", width: "100px" }}
         onClick={() => {
