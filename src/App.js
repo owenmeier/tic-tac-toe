@@ -136,6 +136,11 @@ export default function Game() {
           </span>
         ))}
       </div>
+      <button
+        style={{ backgroundColor: "lime", marginTop: "4px", width: "100px" }}
+      >
+        Reset Game
+      </button>
     </>
   );
 }
